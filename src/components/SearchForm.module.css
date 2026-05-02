@@ -1,0 +1,168 @@
+.wrap { max-width: 640px; margin: 0 auto; }
+
+.hero { text-align: center; margin-bottom: 36px; }
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+.heroSub { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 440px; margin: 0 auto; }
+
+.form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.row { display: flex; gap: 12px; }
+.row .field { flex: 1; }
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.req { color: var(--rose); }
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.input::placeholder { color: var(--text-faint); }
+.input:focus { border-color: var(--accent-border); background: var(--surface3); }
+
+.catGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.catChip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 13px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.catChip:hover { background: var(--surface3); color: var(--text); }
+.catChipActive { font-weight: 600; }
+.catIcon { font-size: 14px; }
+.catName { font-size: 13px; }
+
+.addCatBtn {
+  padding: 7px 13px;
+  background: transparent;
+  border: 1px dashed var(--border2);
+  border-radius: 999px;
+  color: var(--text-faint);
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.addCatBtn:hover { border-color: var(--accent-border); color: var(--accent); }
+
+.addCatForm {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  animation: fadeIn 0.2s ease both;
+}
+
+.cancelBtn {
+  padding: 8px 16px;
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.addBtn {
+  padding: 8px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--rose);
+  background: var(--rose-soft);
+  border: 1px solid rgba(244,63,94,0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 13px;
+}
+
+.searchBtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: -0.3px;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(124,92,252,0.3);
+}
+.searchBtn:hover:not(:disabled) { background: #8b6dfd; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(124,92,252,0.4); }
+.searchBtn:active:not(:disabled) { transform: translateY(0); }
+.searchBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btnSpinner {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.examples { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.examplesLabel { font-size: 12px; color: var(--text-faint); font-family: var(--font-mono); }
+.exampleChip {
+  padding: 5px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 12px;
+  transition: all 0.15s;
+}
+.exampleChip:hover { background: var(--surface3); color: var(--text); border-color: var(--border2); }
+
+@media (max-width: 480px) {
+  .heroTitle { font-size: 28px; }
+  .row { flex-direction: column; }
+}
